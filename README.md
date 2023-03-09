@@ -81,12 +81,12 @@ Repository:
 | create_tables.py | Drops, creates the database and the tables. |
 |    etl.ipynb     | Transforms the data from JSON format and populates the tables.
 |
-|      etl.py      | Transforms the data from JSON format and populates the tables.       |
-|  sql_queries.py  | Contains all sql used in the project.              
+|      etl.py      | Transforms the data from JSON format and populates the tables.|
+|  sql_queries.py  | Contains all sql used in the project.|
 |
-|       data       | Folder at the root of the project, with all songs and logs data JSONS.                       |
+|       data       | Folder with songs and logs data in JSON format.                       |
 |      images      | Folder with images used on the project.                                                      |
-|    README.md     | File with all instructions and descriptions of the project.                                                                              
+|    README.md     | File with all instructions and descriptions of the project.|                                  
 
 
 ### Project Requirements
