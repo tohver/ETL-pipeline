@@ -79,13 +79,11 @@ Repository:
 | :--------------: | :------------------------------------------------------------------------------------------: |
 |    test.ipynb    | Let you check if the database and tables work correctly |
 | create_tables.py | Drops, creates the database and the tables. |
-|    etl.ipynb     | Transforms the data from JSON format and populates the tables.
-|
+|    etl.ipynb     | Transforms the data from JSON format and populates the tables.|
 |      etl.py      | Transforms the data from JSON format and populates the tables.|
 |  sql_queries.py  | Contains all sql used in the project.|
-|
-|       data       | Folder with songs and logs data in JSON format.                       |
-|      images      | Folder with images used on the project.                                                      |
+|       data       | Folder with songs and logs data in JSON format. |
+|      images      | Folder with images used on the project.|
 |    README.md     | File with all instructions and descriptions of the project.|                                  
 
 
