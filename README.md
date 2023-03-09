@@ -33,6 +33,28 @@ Sample:
 {"artist": null, "auth": "Logged In", "firstName": "Walter", "gender": "M", "itemInSession": 0, "lastName": "Frye", "length": null, "level": "free", "location": "San Francisco-Oakland-Hayward, CA", "method": "GET","page": "Home", "registration": 1540919166796.0, "sessionId": 38, "song": null, "status": 200, "ts": 1541105830796, "userAgent": "\"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/36.0.1985.143 Safari\/537.36\"", "userId": "39"}
 ```
 
+## Database Schema Design
+
+### Database Entity Relationship Diagram 
+
+In this project we used the Star Schema with Song Plays as a fact table. It  contains all the metrics of the events (user actions). The dimension tables contain about the user, artist, songs and time.
+
+The Star Schema is typically used for relational data modeling. If properly designed it allows to find the required information using the minimum number of joins in the queries. 
+
+## Project Structure
+
+| Files / Folders  |                                     Description                                              |
+| :--------------: | :------------------------------------------------------------------------------------------: |
+|    test.ipynb    | Let you check if the database and tables work correctly |
+| create_tables.py | Drops, creates the database and the tables. |
+|    etl.ipynb     | Transforms the data from JSON format and populates the tables.|
+|      etl.py      | Transforms the data from JSON format and populates the tables.|
+|  sql_queries.py  | Contains all sql used in the project.|
+|       data       | Folder with songs and logs data in JSON format. |
+|      images      | Folder with images used on the project.|
+|    README.md     | File with all instructions and descriptions of the project.|                                  
+
+
 
 ### Prerequisites
 
@@ -59,26 +81,6 @@ The prerequisites to run the program are:
 
 
 
-## Database Schema Design
-
-### Database Entity Relationship Diagram 
-
-In this project we used the Star Schema with Song Plays as a fact table. It  contains all the metrics of the events (user actions). The dimension tables contain about the user, artist, songs and time.
-
-The Star Schema is typically used for relational data modeling. If properly designed it allows to find the required information using the minimum number of joins in the queries. 
-
-## Project Structure
-
-| Files / Folders  |                                     Description                                              |
-| :--------------: | :------------------------------------------------------------------------------------------: |
-|    test.ipynb    | Let you check if the database and tables work correctly |
-| create_tables.py | Drops, creates the database and the tables. |
-|    etl.ipynb     | Transforms the data from JSON format and populates the tables.|
-|      etl.py      | Transforms the data from JSON format and populates the tables.|
-|  sql_queries.py  | Contains all sql used in the project.|
-|       data       | Folder with songs and logs data in JSON format. |
-|      images      | Folder with images used on the project.|
-|    README.md     | File with all instructions and descriptions of the project.|                                  
 
 <!-- LICENSE -->
 
