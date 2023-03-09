@@ -1,7 +1,5 @@
 # ETL pipeline and Data Modeling with PostgreSQL
 
-<br />
-
 <p align="left">
   Project in Data Engineer Nanodegree Course by Udacity
   <br />
