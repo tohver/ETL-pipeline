@@ -67,16 +67,9 @@ The prerequisites to run the program are:
 
 ### Database Entity Relationship Diagram 
 
-The scheme used in this project was the Star Schema where we have Song Plays as a fact table that contains all the metrics (facts) associated with each event (user actions) and four other dimension tables that contain data related to the user, artist, songs and time data such as day, hour, etc.
+In this project we used the Star Schema with Song Plays as a fact table. It  contains all the metrics of the events (user actions). The dimension tables contain about the user, artist, songs and time.
 
-This approach is mostly used for relational data modeling, it allows us to have a search in a database using the minimum number of "Joins" in our queries which consequently generates quick reads.
-
-In this project, the amount of data used is not large enough for us to use a big data or NoSQL database solution.
-
-The Entity Relationship Diagram (ERD) of the data model is represented by the image
-below:
-
-![database](images/erd_p1.png)
+The Star Schema is typically used for relational data modeling. If properly designed it allows to find the required information using the minimum number of joins in the queries. 
 
 ## Project Structure
 
@@ -84,11 +77,12 @@ Repository:
 
 | Files / Folders  |                                     Description                                              |
 | :--------------: | :------------------------------------------------------------------------------------------: |
-|    test.ipynb    | Displays the first few rows of each table to let you check your database.                    |
-| create_tables.py | Drops, creates and also reseting.                                                            |
-|    etl.ipynb     | Reads and processes a single file from song_data and log_data and loads the data into tables.|
+|    test.ipynb    | Let you check if the database and tables work correctly .                    |
+| create_tables.py | Drops, creates the database and the tables.                                                            |
+|    etl.ipynb     | Transforms the data from JSON format and populates the tables.
+|
 |      etl.py      | Reads and processes files from song_data and log_data and loads them into your tables.       |
-|  sql_queries.py  | Contains all your sql queries, and is imported into the last three files above.              |
+|  sql_queries.py  | Contains all sql queries used in project.              |
 |       data       | Folder at the root of the project, with all songs and logs data JSONS.                       |
 |      images      | Folder with images used on the project.                                                      |
 |    README.md     | File with all instructions and descriptions of the project.                                                                              
