@@ -73,8 +73,6 @@ The Star Schema is typically used for relational data modeling. If properly desi
 
 ## Project Structure
 
-Repository:
-
 | Files / Folders  |                                     Description                                              |
 | :--------------: | :------------------------------------------------------------------------------------------: |
 |    test.ipynb    | Let you check if the database and tables work correctly |
@@ -86,16 +84,6 @@ Repository:
 |      images      | Folder with images used on the project.|
 |    README.md     | File with all instructions and descriptions of the project.|                                  
 
-
-### Project Requirements
-
-#### Query to evaluate the requeriment :
-  - It’s okay if there are some null values for song titles and artist names in the songplays table. There is only 1 actual row that will have a songid and an artistid.
-
-```
-    SELECT * FROM songplays WHERE artist_id <> 'None';
-```
-
 <!-- LICENSE -->
 
 ## License
@@ -104,9 +92,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- CONTACT -->
-
-## Contact
-
-Djan Magno - djan.magno@gmail.com
-
-Project Link - [https://github.com/djanmagno/Udacity-Data-Engineer-Nanodegree/tree/master/Project-1-Data-Modeling-with-Postgres](https://github.com/djanmagno/Udacity-Data-Engineer-Nanodegree/tree/master/Project-1-Data-Modeling-with-Postgres)
