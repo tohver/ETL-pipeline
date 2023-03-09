@@ -77,12 +77,13 @@ Repository:
 
 | Files / Folders  |                                     Description                                              |
 | :--------------: | :------------------------------------------------------------------------------------------: |
-|    test.ipynb    | Let you check if the database and tables work correctly .                    |
-| create_tables.py | Drops, creates the database and the tables.                                                            |
+|    test.ipynb    | Let you check if the database and tables work correctly |
+| create_tables.py | Drops, creates the database and the tables. |
 |    etl.ipynb     | Transforms the data from JSON format and populates the tables.
 |
-|      etl.py      | Reads and processes files from song_data and log_data and loads them into your tables.       |
-|  sql_queries.py  | Contains all sql queries used in project.              |
+|      etl.py      | Transforms the data from JSON format and populates the tables.       |
+|  sql_queries.py  | Contains all sql used in the project.              
+|
 |       data       | Folder at the root of the project, with all songs and logs data JSONS.                       |
 |      images      | Folder with images used on the project.                                                      |
 |    README.md     | File with all instructions and descriptions of the project.                                                                              
