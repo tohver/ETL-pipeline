@@ -1,11 +1,8 @@
 # ETL-pipeline
 
-<!-- PROJECT LOGO --> 
 <br />
 
 <p align="center">
- <a href="https://github.com/djanmagno/Udacity-Data-Engineer-Nanodegree">
- </a>
  <h2 align="center"><b>Data Modeling ETL with PostgreSQL</b></h2>
  <p align="center">
   Udacity Data Engineer Nanodegree Course Project 1
