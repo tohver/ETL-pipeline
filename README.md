@@ -2,9 +2,7 @@
 
 <br />
 
-<p align="center">
- <h2 align="left"><b>Data Modeling ETL with PostgreSQL</b></h2>
- <p align="left">
+<p align="left">
   Project in Data Engineer Nanodegree Course by Udacity
   <br />
  </p>
