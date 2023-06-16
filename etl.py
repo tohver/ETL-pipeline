@@ -17,11 +17,11 @@ def process_song_file(cur: Any, filepath: str) -> None:
     df = df = pd.read_json(filepath, lines = True)
 
     # insert song record
-    song_data = df[['song_id', 'title', 'artist_id', 'year', 'duration']]
+    song_data = df[['song_id', 'title', 'artist_id', 'year', 'duration']].values[0]
     cur.execute(song_table_insert, song_data)
     
     # insert artist record
-    artist_data = df[['artist_id', 'artist_name', 'artist_location', 'artist_latitude', 'artist_longitude']]
+    artist_data = df[['artist_id', 'artist_name', 'artist_location', 'artist_latitude', 'artist_longitude']].values[0]
     cur.execute(artist_table_insert, artist_data)
 
 
@@ -121,7 +121,7 @@ def process_data(cur: Any, conn: Any, filepath: str, func: Any) -> None:
 def main():
     conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
     cur = conn.cursor()
-
+    
     process_data(cur, conn, filepath = 'data/song_data', func = process_song_file)
     process_data(cur, conn, filepath = 'data/log_data', func = process_log_file)
 

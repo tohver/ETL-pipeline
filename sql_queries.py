@@ -42,8 +42,8 @@ artist_table_create = ("""
             artist_id VARCHAR NOT NULL,
             name VARCHAR NOT NULL,
             location VARCHAR NOT NULL,
-            latitude POINT,
-            longitude POINT,
+            latitude DECIMAL,
+            longitude DECIMAL,
             PRIMARY KEY (artist_id)
         );
 """)
