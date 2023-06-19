@@ -1,13 +1,5 @@
 # Data Warehouse with AWS Redshift
 
-## Summary
-
- - [Introduction](#introduction)
- - [The ETL Process](#the-etl-process)
-
- - [Analyzing the results](#analyzing-the-results)
- - [The database structure](#the-database-structure)
-
 ## Introduction
 
 A music streaming startup, Sparkify, has grown their user base and song database and want 
@@ -46,7 +38,7 @@ The data are in JSON files.
 
 
 
-## ETL process
+## ETL Process
 
 Steps:
 
@@ -160,7 +152,7 @@ b) load the data from the staging tables to the analytical tables
 |user_agent| varchar| |
 
 
-### Query Examples
+## Query Examples
 
 Staging table `staging_events`
 ~~~~
