@@ -163,18 +163,19 @@ b) load the data from the staging tables to the analytical tables
 ### Query Examples
 
 Staging table `staging_events`
-
-`COPY staging_events 
+~~~~
+COPY staging_events 
         FROM {} 
         iam_role {} 
         region {}
         FORMAT AS JSON {} 
         timeformat 'epochmillisecs'
-        TRUNCATECOLUMNS BLANKSASNULL EMPTYASNULL;`
-
+        TRUNCATECOLUMNS BLANKSASNULL EMPTYASNULL;
+~~~~
 
 Fact Table `songplays`
-`INSERT INTO songplays (start_time, user_id, level, song_id, artist_id, session_id, location, user_agent) 
+~~~~
+INSERT INTO songplays (start_time, user_id, level, song_id, artist_id, session_id, location, user_agent) 
         SELECT DISTINCT se.ts, 
                         se.userId, 
                         se.level, 
@@ -186,11 +187,13 @@ Fact Table `songplays`
         FROM staging_events se 
         INNER JOIN staging_songs ss 
             ON se.song = ss.title AND se.artist = ss.artist_name
-        WHERE se.page = 'NextSong';`
+        WHERE se.page = 'NextSong';
+~~~~
 
 Dimension table `Time`
 
-`INSERT INTO time (start_time, hour, day, week, month, year, weekday)
+~~~~
+INSERT INTO time (start_time, hour, day, week, month, year, weekday)
         SELECT DISTINCT  se.ts,
                         EXTRACT(hour from se.ts),
                         EXTRACT(day from se.ts),
@@ -199,5 +202,5 @@ Dimension table `Time`
                         EXTRACT(year from se.ts),
                         EXTRACT(weekday from se.ts)
         FROM staging_events se
-        WHERE se.page = 'NextSong';`
-
+        WHERE se.page = 'NextSong';
+~~~~        
