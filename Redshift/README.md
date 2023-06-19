@@ -19,14 +19,14 @@ The data sources are provided by two public S3 buckets:
 All files are in the same directory.
 2. Event bucket (s3://udacity-dend/log_data), contains info about actions done by users, what song are listening etc.
 
-b>Log Dataset structure:</b>
-![Log Dataset](./images/log_dataset.png)
-
 <b>Song dataset structure:</b>
 ~~~~
 {"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null
 , "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", 
 "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}
 ~~~~
+
+<b>Log Dataset structure:</b>
+
 --------------------------------------------
 
