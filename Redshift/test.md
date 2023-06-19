@@ -27,7 +27,6 @@ The data sources are in two public S3 buckets:
 The data are in JSON files.
 
 <b>Log Dataset structure:</b>
-![Log Dataset](./images/log_dataset.jpg)
 
 <b>Song dataset structure:</b>
 ~~~~
