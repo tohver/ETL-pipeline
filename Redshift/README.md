@@ -28,5 +28,7 @@ All files are in the same directory.
 
 <b>Log Dataset structure:</b>
 
+![log-data](https://github.com/tohver/ETL-pipeline/assets/32098405/07eb2dbd-b878-4dd0-8a3b-63a16ba04f50)
+
 --------------------------------------------
 
