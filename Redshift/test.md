@@ -148,3 +148,11 @@ The data are in JSON files.
 |session_id| int| NOT NULL|
 |location| varchar| |
 |user_agent| varchar| |
+
+
+## ETL process
+
+Steps:
+
+1. Ingest the log data from unstructured log files on S3 buckets into staging tables.
+2. Insert data from staging tables into a star schema
