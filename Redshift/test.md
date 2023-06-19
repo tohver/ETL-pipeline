@@ -27,6 +27,8 @@ The data sources are in two public S3 buckets:
 The data are in JSON files.
 
 <b>Log Dataset structure:</b>
+![log-data](https://github.com/tohver/ETL-pipeline/assets/32098405/304f8fd3-e59a-4f93-982a-0832b74e175a)
+
 ![Log Dataset](./images/log_dataset.jpg)
 
 <b>Song dataset structure:</b>
