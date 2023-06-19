@@ -32,3 +32,80 @@ All files are in the same directory.
 
 --------------------------------------------
 
+## Partition parquet table structure
+
+### Fact table `songplays`
+
+~~~~
+root
+ |-- start_time: timestamp (nullable = true)
+ |-- userId: string (nullable = true)
+ |-- level: string (nullable = true)
+ |-- sessionId: long (nullable = true)
+ |-- location: string (nullable = true)
+ |-- userAgent: string (nullable = true)
+ |-- song_id: string (nullable = true)
+ |-- artist_id: string (nullable = true)
+ |-- songplay_id: long (nullable = false)
+~~~~
+partitionBy("year", "month")
+
+
+### Dimension tables
+
+#### `users`
+
+~~~~
+root
+ |-- firstName: string (nullable = true)
+ |-- lastName: string (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- level: string (nullable = true)
+ |-- userId: string (nullable = true)
+~~~~
+
+#### `songs`
+
+~~~~
+root
+ |-- song_id: string (nullable = true)
+ |-- title: string (nullable = true)
+ |-- artist_id: string (nullable = true)
+ |-- year: long (nullable = true)
+ |-- duration: double (nullable = true)
+~~~~
+partitionBy("year", "artist_id")
+
+#### `artists`
+
+~~~~
+root
+ |-- artist_id: string (nullable = true)
+ |-- artist_name: string (nullable = true)
+ |-- artist_location: string (nullable = true)
+ |-- artist_latitude: double (nullable = true)
+ |-- artist_longitude: double (nullable = true)
+~~~~
+
+#### `time`
+
+~~~~
+root
+ |-- start_time: timestamp (nullable = true)
+ |-- hour: integer (nullable = true)
+ |-- day: integer (nullable = true)
+ |-- week: integer (nullable = true)
+ |-- month: integer (nullable = true)
+ |-- year: integer (nullable = true)
+ |-- weekday: integer (nullable = true)
+~~~~
+
+partitionBy("year", "month")
+
+--------------------------------------------
+
+## Get started
+
+1. Replace AWS IAM Credentials in dl.cfg
+2. If needed, modify input and output data paths in etl.py main function
+3. Run python etl.py
